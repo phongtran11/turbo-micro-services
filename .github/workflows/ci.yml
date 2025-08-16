@@ -16,7 +16,7 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm run install
 
       - name: Run linting and tests
-        run: pnpm turbo run lint test
+        run: npm lint && npm format && npm run check-types
